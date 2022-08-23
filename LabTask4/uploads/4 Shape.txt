@@ -1,0 +1,60 @@
+#include <iostream>
+#include<GL/gl.h>
+#include <GL/glut.h>
+
+void myDisplay(void)
+{
+glClear (GL_COLOR_BUFFER_BIT);
+glColor3ub (255,0,0);
+glPointSize(5.0);
+glBegin(GL_LINES);
+glVertex2i(0, 240);
+glVertex2i(640, 240);
+glVertex2i(320, 0);
+glVertex2i(320, 480);
+glEnd();
+glColor3ub (0,0,0);
+glBegin(GL_LINES);
+glVertex2i(80, 60);
+glVertex2i(200, 60);
+glVertex2i(80, 120);
+glVertex2i(200, 120);
+glVertex2i(80, 180);
+glVertex2i(200, 180);
+glVertex2i(80, 60);
+glVertex2i(80, 180);
+glEnd();
+glColor3ub (0,0,255);
+glBegin(GL_QUADS);
+glVertex2i(400, 300);
+glVertex2i(550, 300);
+glVertex2i(550, 420);
+glVertex2i(400, 420);
+glColor3ub (0,255,0);
+glVertex2i(475, 250);
+glVertex2i(625, 250);
+glVertex2i(625, 360);
+glVertex2i(475, 360);
+glEnd();
+glFlush ();
+}
+
+void myInit (void)
+{
+glClearColor(1.0, 1.0, 1.0, 0.0);
+gluOrtho2D(0.0, 640.0, 0.0, 480.0);
+}
+
+
+
+int main(int argc, char** argv)
+{
+glutInit(&argc, argv);
+glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
+glutInitWindowSize (640, 480);
+glutInitWindowPosition (100, 150);
+glutCreateWindow ("");
+glutDisplayFunc(myDisplay);
+myInit ();
+glutMainLoop();
+}
