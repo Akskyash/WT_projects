@@ -1,0 +1,21 @@
+[
+    null,
+    {
+        "Fullname": "Akash",
+        "Username": "Asif",
+        "Email": "asifakash2000@gmail.com",
+        "Age": "24",
+        "Password": "asd123",
+        "Confrimpassword": "asd123",
+        "Gender": "Male"
+    },
+    {
+        "Fullname": "Asif Sharif Akash",
+        "Username": "Cald",
+        "Email": "asifakash2001@gmail.com",
+        "Age": "23",
+        "Password": "12345",
+        "Confrimpassword": "12345",
+        "Gender": "Male"
+    }
+]
